@@ -1,0 +1,538 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Online Food Delivery</title>
+<link rel="stylesheet" href="style.css" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <header>
+    <h1><i class="fa-solid fa-truck" style="color: blue;"></i>FOOD EXPRESS</h1>
+    <nav>
+        <div class="navbar">
+            <a href="index.html"><i class="fa-solid fa-house"style=" color: #FFD700;"></i>Home</a>
+            <a href="menu.html"> <i class="fas fa-bars"style=" color: #FFD700;"></i>Menu</a>
+            <a href="about .html"><i class="fas fa-info-circle"style=" color: #FFD700;"></i>About</a>
+            <a href="contact.html"><i class="fa-solid fa-phone-volume"style=" color: #FFD700;"></i>Contact</a>
+              <a href="review.html"><i class="fa-solid fa-star"style=" color: #FFD700;"></i>Review</a>
+        </div>
+    </nav>
+    <div class="cart-info">
+        <button id="viewCartBtn">View Cart (<span id="cartCount">0</span>)</button>
+    </div>
+    
+</header>
+
+
+
+<!-- Checkout button remains the same -->
+
+<section class="categories">
+  <h2 style="text-align: center;">Categories</h2>
+  <div style="text-align: center;">
+    <button class="category-btn" data-category="all">All</button>
+    <button class="category-btn" data-category="biryani">Biryani</button>
+    <button class="category-btn" data-category="icecream">Ice Cream</button>
+    <button class="category-btn" data-category="pizza">Pizza</button>
+    <button class="category-btn" data-category="pasta">Pasta</button>
+    <button class="category-btn" data-category="salad">Salad</button>
+    <button class="category-btn" data-category="south-indian dish">south-indian dish</button>
+    <button class="category-btn" data-category="juice">juice</button>
+    <button class="category-btn" data-category="Tea&coffee">Tea&coffee</button>
+
+  </div>
+
+</section>
+
+<section class="menu">
+  <h2 style="text-align: center;">Menu</h2>
+  <div class="food-items">
+    <!-- Food items with images and categories -->
+    <div class="food-card" data-id="1" data-name="Burger" data-price="100" data-category="pizza">
+      <img src="./images/burger.jpg  "  alt="Burger" />
+      <div class="food-name">Burger</div>
+      <div class="food-price">₹100</div>
+      <button class="add-btn">Add to Cart</button>
+    </div>
+    <div class="food-card" data-id="2" data-name=" cheese Burger" data-price="150" data-category="pizza">
+      <img src="./images/cheese birger.jpg" alt="Burger" />
+      <div class="food-name"> cheese Burger</div>
+      <div class="food-price">₹150</div>
+      <button class="add-btn">Add to Cart</button>
+      </div>
+    <div class="food-card" data-id="3" data-name=" cheese Pizza" data-price="250" data-category="pizza">
+      <img src="./images/chease [pizza.jpg" alt="Pizza" />
+      <div class="food-name">Pizza cheese</div>
+      <div class="food-price">₹250</div>
+      <button class="add-btn">Add to Cart</button>
+    </div>
+    <div class="food-card" data-id="4" data-name="Pizza" data-price="200" data-category="pizza">
+      <img src="./images/pizza.jpg" alt="Pizza" />
+      <div class="food-name">Pizza </div>
+      <div class="food-price">₹200</div>
+      <button class="add-btn">Add to Cart</button>
+    </div>
+     <div class="food-card" data-id="4" data-name=" chicken Pizza" data-price="300" data-category="pizza">
+      <img src="./images/chicken pizza.jpeg" alt="Pizza" />
+      <div class="food-name"> chikcen Pizza </div>
+      <div class="food-price">₹300</div>
+      <button class="add-btn">Add to Cart</button>
+    </div>
+    <div class="food-card" data-id="5" data-name=" creamy Pasta" data-price="70" data-category="pasta">
+      <img src="./images/cramy pasta.jpg" alt="Pasta" />
+      <div class="food-name"> creamy Pasta</div>
+      <div class="food-price">₹70</div>
+      <button class="add-btn">Add to Cart</button>
+    </div>
+    <div class="food-card" data-id="6" data-name=" spicy Pasta" data-price="80" data-category="pasta">
+      <img src="./images/pasta.jpg" alt="Pasta" />
+      <div class="food-name"> spicy Pasta</div>
+      <div class="food-price">₹80</div>
+      <button class="add-btn">Add to Cart</button>
+    </div>
+    <div class="food-card" data-id="7" data-name="chicken noodles" data-price="75" data-category="pasta">
+      <img src="./images/chiken nooodles.jpg" alt="Pasta" />
+      <div class="food-name">chicken nooodles</div>
+      <div class="food-price">₹75</div>
+      <button class="add-btn">Add to Cart</button>
+    </div>
+        <div class="food-card" data-id="7" data-name="Naan &gravy" data-price="75" data-category="pasta">
+      <img src="./images/naan.jpeg" alt="Pasta" />
+      <div class="food-name">Naan &gravy</div>
+      <div class="food-price">₹75</div>
+      <button class="add-btn">Add to Cart</button>
+    </div>
+    <div class="food-card" data-id="8" data-name="egg noodles" data-price="70" data-category="pasta">
+      <img src="./images/egg noodels.jpg" alt="Pasta" />
+      <div class="food-name">egg noodels</div>
+      <div class="food-price">₹70</div>
+      <button class="add-btn">Add to Cart</button>
+    </div>
+    <div class="food-card" data-id="9" data-name=" chicken salad" data-price="70" data-category="salad">
+      <img src="./images/chicken salad.jpg" alt="Salad" />
+      <div class="food-name">chicken salad</div>
+      <div class="food-price">₹70</div>
+      <button class="add-btn">Add to Cart</button>
+    </div>
+    <div class="food-card" data-id="10" data-name=" veg Salad" data-price="50" data-category="salad">
+      <img src="./images/salad.jpg" alt=" veg Salad" />
+      <div class="food-name"> veg Salad </div>
+      <div class="food-price">₹50</div>
+      <button class="add-btn">Add to Cart</button>
+    </div>
+    <div class="food-card" data-id="11" data-name=" fruits salad" data-price="50" data-category="salad">
+      <img src="./images/fruits salad.jpg" alt="Salad" />
+      <div class="food-name"> fruits Salad</div>
+      <div class="food-price">₹50</div>
+      <button class="add-btn">Add to Cart</button>
+    </div>
+    
+    <div class="food-card" data-id="13" data-name="vennila" data-price="30" data-category="icecream">
+      <img src="./images/vennaila.jpg" alt=" vennila Cream" />
+      <div class="food-name"> vennila Ice Cream</div>
+      <div class="food-price">₹30</div>
+      <button class="add-btn">Add to Cart</button>
+    </div>
+    <div class="food-card" data-id="13" data-name="blueberrycake" data-price="130" data-category="icecream">
+      <img src="./images/blueberry cake.jpeg" alt=" vennila Cream" />
+      <div class="food-name"> blueberrycake</div>
+      <div class="food-price">₹130</div>
+      <button class="add-btn">Add to Cart</button>
+    </div>
+    
+    <div class="food-card" data-id="14" data-name=" Butterscotch ice Cream" data-price="25" data-category="icecream">
+      <img src="./images/butter scktoch.jpg" alt="Ice Cream" />
+      <div class="food-name"> Butterscotch Ice Cream</div>
+      <div class="food-price">₹25</div>
+      <button class="add-btn">Add to Cart</button>
+    </div>
+    <div class="food-card" data-id="14" data-name=" mango ice Cream" data-price="25" data-category="icecream">
+      <img src="./images/mango.jpeg" alt="Ice Cream" />
+      <div class="food-name"> Mongo  Ice Cream</div>
+      <div class="food-price">₹25</div>
+      <button class="add-btn">Add to Cart</button>
+    </div>
+    <div class="food-card" data-id="14" data-name=" chocobar ice Cream" data-price="35" data-category="icecream">
+      <img src="./images/chocobar.jpeg" alt="Ice Cream" />
+      <div class="food-name"> Butterscotch Ice Cream</div>
+      <div class="food-price">₹35</div>
+      <button class="add-btn">Add to Cart</button>
+    </div>
+    <div class="food-card" data-id="14" data-name=" chocloate Cream" data-price="30" data-category="icecream">
+      <img src="./images/Chocolate-Covered-Strawberries-Tutorial-1.jpg" alt="Ice Cream" />
+      <div class="food-name"> strawberry chocloate </div>
+      <div class="food-price">₹30</div>
+      <button class="add-btn">Add to Cart</button>
+    </div>
+    <div class="food-card" data-id="14" data-name=" cone ice Cream" data-price="25" data-category="icecream">
+      <img src="./images/cone.jpeg" alt="Ice Cream" />
+      <div class="food-name"> Cone Ice Cream</div>
+      <div class="food-price">₹25</div>
+      <button class="add-btn">Add to Cart</button>
+    </div>
+    <div class="food-card" data-id="14" data-name=" cup  ice Cream" data-price="20" data-category="icecream">
+      <img src="./images/cupice.jpeg" alt="Ice Cream" />
+      <div class="food-name"> cup Ice Cream</div>
+      <div class="food-price">₹20</div>
+      <button class="add-btn">Add to Cart</button>
+    </div>
+    <div class="food-card" data-id="15" data-name=" chocloate ice Cream" data-price="30" data-category="icecream">
+      <img src="./images/chocolate icecream.jpg" alt="Ice Cream" />
+      <div class="food-name">chocolate icecream</div>
+      <div class="food-price">₹30</div>
+      <button class="add-btn">Add to Cart</button>
+    </div>
+    <div class="food-card" data-id="16" data-name="  Dark chocloate cake" data-price="150" data-category="icecream">
+      <img src="./images/dark chocloate cake.jpg" alt="Ice Cream" />
+      <div class="food-name">dark chocloate cake</div>
+      <div class="food-price">₹150</div>
+      <button class="add-btn">Add to Cart</button>
+    </div>
+    <div class="food-card" data-id="17" data-name="white forest cake" data-price="200" data-category="icecream">
+      <img src="./images/white forset cake.jpg" alt="Ice Cream" />
+      <div class="food-name">white forset cake</div>
+      <div class="food-price">₹200</div>
+      <button class="add-btn">Add to Cart</button>
+    </div>
+      <div class="food-card" data-id="18" data-name="Biryani mutton" data-price="120" data-category="biryani">
+        <img src="./images/barbeque.jpeg" alt="Biryani" />
+        <div class="food-name"> Barbeque</div>
+        <div class="food-price">₹120</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+        <div class="food-card" data-id="18" data-name="Biryani mutton" data-price="120" data-category="biryani">
+        <img src="./images/prawn.jpeg" alt="Biryani" />
+        <div class="food-name"> prawn Biryani</div>
+        <div class="food-price">₹120</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+    <div class="food-card" data-id="18" data-name="Biryani mutton" data-price="120" data-category="biryani">
+        <img src="./images/b80bef4880ab2f36be6098e75ea51e0f.jpg" alt="Biryani" />
+        <div class="food-name"> prawn Biryani</div>
+        <div class="food-price">₹120</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+      <div class="food-card" data-id="12" data-name="Chicken briyani " data-price="70" data-category="biryani">
+        <img src="./images/chicken briyani.jpg" alt=" chicken Biryani" />
+        <div class="food-name"> Chicken Biryani</div>
+        <div class="food-price">₹70</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+      <div class="food-card" data-id="12" data-name="Chicken Rice " data-price="70" data-category="biryani">
+        <img src="./images/chickenrice.jpeg" alt=" chicken Biryani" />
+        <div class="food-name"> Chicken Rice</div>
+        <div class="food-price">₹70</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+      <div class="food-card" data-id="19" data-name="veg Chicken" data-price="60" data-category="biryani">
+        <img src="./images/veg briyani.jpg" alt="Biryani" />
+        <div class="food-name"> veg Biryani </div>
+        <div class="food-price">₹60</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+      <div class="food-card" data-id="19" data-name="chicken gravy" data-price="90" data-category="biryani">
+        <img src="./images/chicken gravy.jpeg" alt="Biryani" />
+        <div class="food-name"> chicken gravy </div>
+        <div class="food-price">₹90</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+      <div class="food-card" data-id="19" data-name="fish gravy" data-price="70" data-category="biryani">
+        <img src="./images/fish gravy.jpeg" alt="Biryani" />
+        <div class="food-name"> fish gravy </div>
+        <div class="food-price">₹70</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+      <div class="food-card" data-id="19" data-name="fish fry" data-price="50" data-category="biryani">
+        <img src="./images/fish fry.jpeg" alt="Biryani" />
+        <div class="food-name">fish fry</div>
+        <div class="food-price">₹50</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+      <div class="food-card" data-id="20" data-name=" mushroom Biryani " data-price="75" data-category="biryani">
+        <img src="./images/mushrrrom.jpg" alt="Biryani" />
+        <div class="food-name"> mushroom Biryani</div>
+        <div class="food-price">₹75</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+      <div class="food-card" data-id="21" data-name="KFC Chicken" data-price="300" data-category="biryani">
+        <img src="./images/kfc.jpg" alt="Biryani" />
+        <div class="food-name">KFC Chicken</div>
+        <div class="food-price">₹300</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+      <div class="food-card" data-id="22" data-name=" Egg Biryani " data-price="70" data-category="biryani">
+        <img src="./images/egg briyani.jpg" alt="Biryani" />
+        <div class="food-name"> egg Biryani </div>
+        <div class="food-price">₹70</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+      <div class="food-card" data-id="23" data-name=" Dum Biryani" data-price="75" data-category="biryani">
+        <img src="./images/Dum-Biryani-7.webp" alt="Biryani" />
+        <div class="food-name">dum Biryani </div>
+        <div class="food-price">₹75</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+      <div class="food-card" data-id="24" data-name="Chicken 65" data-price="90" data-category="biryani">
+        <img src="./images/chicken 65.jpg" alt="Biryani" />
+        <div class="food-name"> Chicken 65</div>
+        <div class="food-price">₹90</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+      <div class="food-card" data-id="25" data-name="Biryani Chicken" data-price="100" data-category="biryani">
+        <img src="./images/briyani 2.jpg" alt="Biryani" />
+        <div class="food-name">Biryani Chicken </div>
+        <div class="food-price">₹100</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+      <div class="food-card" data-id="26" data-name="Dosa" data-price="10" data-category="south-indian dish">
+        <img src="./images/dosa.jpg" alt="Biryani" />
+        <div class="food-name">dosa</div>
+        <div class="food-price">₹10</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+      <div class="food-card" data-id="27" data-name="chappati" data-price="15" data-category="south-indian dish">
+        <img src="./images/hqdefault.jpg" alt="Biryani" />
+        <div class="food-name">chappati</div>
+        <div class="food-price">₹15</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+      <div class="food-card" data-id="28" data-name="Bajji" data-price="10" data-category="south-indian dish">
+        <img src="./images/Bajji.webp" alt="Biryani" />
+        <div class="food-name">Bajji</div>
+        <div class="food-price">₹10</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+      <div class="food-card" data-id="29" data-name="MeduVadai" data-price="15" data-category="south-indian dish">
+        <img src="./images/MeduVadai3-1.jpg" alt="Biryani" />
+        <div class="food-name">MeduVadai</div>
+        <div class="food-price">₹15</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+      <div class="food-card" data-id="30" data-name="idly" data-price="10" data-category="south-indian dish">
+        <img src="./images/idly.jpg" alt="Biryani" />
+        <div class="food-name">idly</div>
+        <div class="food-price">₹10</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+      <div class="food-card" data-id="30" data-name="samosa" data-price="10" data-category="south-indian dish">
+        <img src="./images/samosa.jpeg" alt="Biryani" />
+        <div class="food-name">samosa</div>
+        <div class="food-price">₹10</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+      <div class="food-card" data-id="30" data-name="pongal" data-price="50" data-category="south-indian dish">
+        <img src="./images/pongal.jpeg" alt="Biryani" />
+        <div class="food-name">pongal</div>
+        <div class="food-price">₹50</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+      <div class="food-card" data-id="30" data-name="sweat pongal" data-price="55" data-category="south-indian dish">
+        <img src="./images/sweat pongal.jpeg" alt="Biryani" />
+        <div class="food-name">sweet pongal</div>
+        <div class="food-price">₹55</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+      <div class="food-card" data-id="30" data-name="kesari" data-price="25" data-category="south-indian dish">
+        <img src="./images/kesari.jpeg" alt="Biryani" />
+        <div class="food-name">kesari</div>
+        <div class="food-price">₹25</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+      <div class="food-card" data-id="30" data-name="Idiyappam" data-price="30" data-category="south-indian dish">
+        <img src="./images/idiyappam.jpeg" alt="Biryani" />
+        <div class="food-name">Idiyappam</div>
+        <div class="food-price">₹30</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+      <div class="food-card" data-id="30" data-name="appam" data-price="30" data-category="south-indian dish">
+        <img src="./images/appam.jpeg" alt="Biryani" />
+        <div class="food-name">Appam</div>
+        <div class="food-price">₹30</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+      <div class="food-card" data-id="31" data-name="Full Meal" data-price="70" data-category="south-indian dish">
+        <img src="./images/9634876480_20d7ac8196_o.jpg" alt="Biryani" />
+        <div class="food-name">Full  Meal</div>
+        <div class="food-price">₹70</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+      <div class="food-card" data-id="31" data-name="poratta" data-price="20" data-category="south-indian dish">
+        <img src="./images/poratta.jpeg" alt="Biryani" />
+        <div class="food-name">Poratta</div>
+        <div class="food-price">₹20</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+      <div class="food-card" data-id="32" data-name="poori" data-price="20" data-category="south-indian dish">
+        <img src="./images/71GtVOIV0HL._SY879_ad81d936-9ec6-484b-bbe6-550c8eba7534.jpg" alt="Biryani" />
+        <div class="food-name">poori</div>
+        <div class="food-price">₹20</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+      <div class="food-card" data-id="33" data-name="Rose milk" data-price="30" data-category="juice">
+        <img src="./images/rose milk.jpeg" alt=" rose milk" />
+        <div class="food-name"> rosemilk</div>
+        <div class="food-price">₹30</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+      <div class="food-card" data-id="34" data-name="watermelon" data-price="30" data-category="juice">
+        <img src="./images/watermelon.jpeg" alt=" watermelon" />
+        <div class="food-name"> watermelon</div>
+        <div class="food-price">₹30</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+      <div class="food-card" data-id="35" data-name="Apple" data-price="30" data-category="juice">
+        <img src="./images/grape-juice.jpg" alt=" vennila Cream" />
+        <div class="food-name"> grape-juice juice</div>
+        <div class="food-price">₹30</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+      <div class="food-card" data-id="36" data-name=" Badam milk" data-price="30" data-category="juice">
+        <img src="./images/badam milk.jpeg" alt=" vennila Cream" />
+        <div class="food-name"> Badam milk</div>
+        <div class="food-price">₹30</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+      <div class="food-card" data-id="37" data-name="beetroot" data-price="30" data-category="juice">
+        <img src="./images/beetroot.jpeg" alt=" vennila Cream" />
+        <div class="food-name"> Beet Root</div>
+        <div class="food-price">₹30</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+      <div class="food-card" data-id="37" data-name="kiwi juice" data-price="50" data-category="juice">
+        <img src="./images/kiwi.jpeg" alt=" vennila Cream" />
+        <div class="food-name"> kiwi juice</div>
+        <div class="food-price">₹50</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+      <div class="food-card" data-id="37" data-name="apple" data-price="40" data-category="juice">
+        <img src="./images/2-12.jpg" alt=" vennila Cream" />
+        <div class="food-name"> apple</div>
+        <div class="food-price">₹40</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+      <div class="food-card" data-id="38" data-name="blueberry juice" data-price="30" data-category="juice">
+        <img src="./images/blueberry.jpeg" alt=" vennila Cream" />
+        <div class="food-name"> blueberry</div>
+        <div class="food-price">₹30</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+      <div class="food-card" data-id="39" data-name="carrot juice" data-price="30" data-category="juice">
+        <img src="./images/carrot.jpeg" alt=" vennila Cream" />
+        <div class="food-name"> carrot juice</div>
+        <div class="food-price">₹30</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+      <div class="food-card" data-id="40" data-name=" falooda" data-price="30" data-category="juice">
+        <img src="./images/falooda.jpeg" alt=" vennila Cream" />
+        <div class="food-name"> Falooda</div>
+        <div class="food-price">₹30</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+      <div class="food-card" data-id="41" data-name=" Orangejuice" data-price="25" data-category="juice">
+        <img src="./images/Orangejuice.jpg" alt="Biryani" />
+        <div class="food-name">Orangejuice</div>
+        <div class="food-price">₹25</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+      <div class="food-card" data-id="42" data-name=" Pomegrante" data-price="30" data-category="juice">
+        <img src="./images/Juicing-2B-682x1024.jpg" alt="Biryani" />
+        <div class="food-name">Pomegrante</div>
+        <div class="food-price">₹30</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+      <div class="food-card" data-id="43" data-name=" Lemon" data-price="20" data-category="juice">
+        <img src="./images/Fizzy-Mango-Lemonade.jpg" alt="Biryani" />
+        <div class="food-name">Lemon</div>
+        <div class="food-price">20</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+      <div class="food-card" data-id="44" data-name=" mongo juice" data-price="20" data-category="juice">
+        <img src="./images/4-mango-juice-manufacturers-4-0qr80.jpg" alt="Biryani" />
+        <div class="food-name">Mongo</div>
+        <div class="food-price">₹20</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+     
+      <div class="food-card" data-id="44" data-name=" coffee" data-price="10" data-category="Tea&coffee">
+        <img src="./images/Vanilla-Latte-3.jpg" alt="Biryani" />
+        <div class="food-name">coffee</div>
+        <div class="food-price">₹10</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+      <div class="food-card" data-id="44" data-name=" Lemon Tea" data-price="20" data-category="Tea&coffee">
+        <img src="./images/lemontea.jpeg" alt="Biryani" />
+        <div class="food-name">lemon Tea</div>
+        <div class="food-price">₹20</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+      <div class="food-card" data-id="44" data-name=" capuccina" data-price="70" data-category="Tea&coffee">
+        <img src="./images/cappuccino.jpeg" alt="Biryani" />
+        <div class="food-name">capuccina</div>
+        <div class="food-price">₹70</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+      <div class="food-card" data-id="44" data-name="black  Tea" data-price="20" data-category="Tea&coffee">
+        <img src="./images/black tea.jpeg" alt="Biryani" />
+        <div class="food-name">black Tea</div>
+        <div class="food-price">₹20</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+        <div class="food-card" data-id="44" data-name="cold coffee" data-price="40" data-category="Tea&coffee">
+        <img src="./images/cold coffee.jpeg" alt="Biryani" />
+        <div class="food-name">cold coffee</div>
+        <div class="food-price">₹40</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+      <div class="food-card" data-id="44" data-name="  Tea" data-price="10" data-category="Tea&coffee">
+        <img src="./images/tea.jpeg" alt="Biryani" />
+        <div class="food-name">Tea</div>
+        <div class="food-price">₹10</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+      <div class="food-card" data-id="44" data-name=" ginger Tea" data-price="20" data-category="Tea&coffee">
+        <img src="./images/gingertea.jpeg" alt="Biryani" />
+        <div class="food-name">ginger Tea</div>
+        <div class="food-price">₹20</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+      <div class="food-card" data-id="44" data-name=" mint Tea" data-price="20" data-category="Tea&coffee">
+        <img src="./images/mint tea.jpeg" alt="Biryani" />
+        <div class="food-name">mint Tea</div>
+        <div class="food-price">₹20</div>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+    <!-- Add more items as needed -->
+  </div>
+</div>
+</div>
+</div>
+  </section>
+</section>
+
+
+<!-- Cart Modal -->
+<div id="cartModal" class="modal">
+<div class="modal-content">
+  
+  <span class="close" id="closeCart">×</span>
+  <!-- existing HTML elements -->
+  <h3>Enter Delivery Address:</h3>
+  
+  <div id="cartItems"></div>
+  <textarea id="address" placeholder="Enter Your Address"></textarea>
+  <div id="totalBill" style="font-weight: bold; font-size: 1.2em; margin-top: 10px;"></div>
+<h3><span id="cartTotal"></span></h3>
+  <button id="checkoutBtn">Checkout</button>
+</div>
+</div>
+<div id="popup-message" class="popup">Item added to cart!</div>
+
+<script src="index.js">
+ 
+</script>
+</body>
+</html>

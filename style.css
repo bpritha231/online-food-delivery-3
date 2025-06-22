@@ -1,0 +1,647 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+  }
+  header h1 {
+    margin: 0;
+  }
+  .cart-info button {
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  .categories {
+    padding: 20px;
+    text-align: center;
+  }
+  .category-btn {
+    margin: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    background-color:#00FFFF;
+    border: none;
+    border-radius: 4px;
+  }
+  .category-btn:hover {
+    background-color: #50C878;
+  }
+  .menu {
+    padding: 20px;
+  }
+  .menu h2 {
+    text-align: center;
+  }
+  .food-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .food-card {
+    border: 1px solid black;
+    border-radius: 8px;
+    width: 200px;
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  .food-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  .food-name {
+    font-weight: bold;
+    margin: 10px 0 5px;
+  }
+  .food-price {
+    color: #555;
+    margin-bottom: 10px;
+  }
+  .add-btn {
+    padding: 8px 12px;
+    cursor: pointer;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+  }
+  .add-btn:hover {
+    background-color: #218838;
+  }
+  /* Modal styles */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+  }
+  .modal-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+  }
+  #closeCart {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  #cartItems {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-top: 10px;
+  }
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  #checkoutBtn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+  }
+  #checkoutBtn:hover {
+    background-color: #0069d9;
+  }
+  
+/* Add these styles if desired */
+#address {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    
+  }
+  #totalBill {
+    margin-top: 10px;
+  }
+  /* nav bar */
+  .navbar h1{
+    color:white;
+    justify-content: center;
+  }
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  .navbar {
+    background-color: #333;
+    position: sticky;
+    overflow: hidden;
+  }
+  .navbar a {
+    float: left;
+    display: flex;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    position: sticky;
+    justify-content: end;
+  }
+  
+  .navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  
+  
+  
+/* about us*/
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden; /* Clear floats */
+}
+
+/* Header Styling */
+header {
+  background-color: #ff6600; /* A common food-related color */
+  color: white;
+  padding: 1em 0;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+header nav ul {
+  padding: 0;
+  list-style: none;
+}
+
+header nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main Content Styling */
+main {
+  padding: 2em 0;
+}
+
+section {
+  margin-bottom: 2em;
+  background-color: white;
+  padding: 2em;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+  color: #ff6600;
+  margin-top: 0;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+section p {
+  margin-bottom: 1em;
+}
+
+section ul {
+  list-style: disc;
+  margin-left: 20px;
+}
+
+section ul li {
+  margin-bottom: 0.5em;
+}
+
+/* Team Section Styling */
+.team-members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.team-member {
+  flex: 1 1 250px; /* Allows members to grow and shrink, with a base width of 250px */
+  text-align: center;
+  padding: 1em;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.team-member img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1em;
+}
+
+.team-member h3 {
+  margin: 0.5em 0;
+  color: #333;
+}
+
+.team-member p {
+  font-size: 0.9em;
+  color: #666;
+}
+
+/* Why Choose Us Section Styling */
+.why-choose-us-section ul {
+  list-style: none; /* Remove default list style */
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.why-choose-us-section ul li {
+  background-color: #ffe6cc; /* Lighter shade of the brand color */
+  padding: 1em;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+}
+
+
+/* Footer Styling */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1em 0;
+  margin-top: 2em;
+}
+
+footer p {
+  margin: 0;
+}  
+/* contact  page */
+/* Add this to your existing style.css or create a new contact.css file */
+
+/* Contact Section Styling */
+.contact-section {
+  padding: 3em 0;
+}
+
+.contact-section h2 {
+  text-align: center;
+  color: #ff6600; /* Match header color */
+  margin-bottom: 1.5em;
+}
+
+.contact-section p {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.contact-methods {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 3em;
+}
+
+.contact-method {
+  flex: 1 1 280px; /* Allows methods to grow and shrink, with a base width of 280px */
+  background-color: #fff;
+  padding: 2em;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.contact-method h3 {
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.contact-method a {
+  color: #ff6600;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-method a:hover {
+  text-decoration: underline;
+}
+
+/* Contact Form Styling */
+.contact-form-container {
+  background-color: #fff;
+  padding: 2em;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 600px; /* Limit the width of the form */
+  margin: 0 auto 3em auto; /* Center the form and add bottom margin */
+}
+
+.contact-form-container h3 {
+  text-align: center;
+  color: #ff6600;
+  margin-bottom: 1.5em;
+}
+
+.form-group {
+  margin-bottom: 1.5em;
+}
+
+.form-group label {
+  display: block; /* Labels on their own line */
+  margin-bottom: 0.5em;
+  font-weight: bold;
+  color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  font-size: 1em;
+}
+
+.form-group textarea {
+  resize: vertical; /* Allow vertical resizing of the textarea */
+}
+
+.submit-button {
+  display: block; /* Button on its own line */
+  width: 100%;
+  background-color: #ff6600;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #e65c00; /* Darker shade on hover */
+}
+
+/* Social Media Styling */
+.social-media {
+  text-align: center;
+  margin-top: 2em;
+}
+
+.social-media h3 {
+  color: #ff6600;
+  margin-bottom: 1em;
+}
+
+.social-media a {
+  display: inline-block;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.social-media img {
+  width: 40px; /* Adjust size as needed */
+  height: 40px;
+  border-radius: 50%; /* Make icons round */
+  transition: transform 0.3s ease;
+}
+
+.social-media img:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* Add basic responsiveness for smaller screens */
+@media (max-width: 768px) {
+  .contact-methods {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .contact-method {
+      flex: 1 1 90%; /* Allow methods to take up more width on smaller screens */
+      max-width: 400px; /* Limit maximum width */
+  }
+}
+/* home pages */
+section{
+  padding: 2rem 9%;
+}
+.home{
+  display: flex;
+  padding: 10px;
+  gap: 20;
+  padding-left: 10px;
+  padding-right: 20px;
+  margin-left: 20px;
+}
+.about_text{
+  font-style: italic;
+  font-size: 30pt;
+  font-weight: 300;
+  margin-left: 20px; ;
+}
+.homepg2{
+  display: flex;
+}
+.logo{
+  display: flex;
+}
+.client{
+  display: flex;
+}
+.content{
+  margin-left: 50px; ;
+}
+.content ul{
+  font-style:serif;
+}
+/* review */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #f8f8f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #ff6347;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.review-form {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.review-form input,
+.review-form textarea,
+.review-form select {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.review-form button {
+  padding: 0.75rem 1.5rem;
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.review-form button:hover {
+  background-color: #e5533f;
+}
+
+.reviews .review {
+  background: #fff;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.stars {
+  color: gold;
+  font-size: 1.2rem;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+/* search bar */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.search-bar input[type="text"] {
+  padding: 0.5rem;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+}
+
+.search-bar button {
+  padding: 0.5rem 1rem;
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #e5533f;
+}
+/* pop up */
+.popup {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  display: none;
+  z-index: 9999;
+  font-weight: bold;
+  animation: fadeInOut 3s ease forwards;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(-10px); }
+  10% { opacity: 1; transform: translateY(0); }
+  90% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-10px); }
+}
